@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+	<head>
+		<title> Gerenciamento de Extintores </title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+        <meta name="description" content="jquery"/>
+        <meta name="keywords" content="jquery" />
+		<meta name="robots" content="all, index, follow" />
+        
+		<link href="css/default.css" rel="stylesheet" type="text/css"/>
+
+		<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+		<script type="text/javascript" src="js/zoom.js"></script>		
+        
+		<style type="text/css">
+			
+			body{ padding-top: 5px; background-image:url(img/fundo.gif) }
+			img { visibility:hidden; }
+			
+			div#map{ float: left; margin-right: 5px; width:702px; height:466px; position: relative; overflow:hidden; border:1px solid #999;  }
+			div#map img#image{ position: absolute; left:0; top:0; }  
+			div#map_thumb{ width: 220px; height: 146px; float: left; position: relative; overflow:hidden; cursor: crosshair; border:1px solid #09F;}
+			div#map_thumb img#thumb{ width: 100%; }
+			div.shadow{ position:absolute;top:0;left:0;width:0;height:0; background:#039; overflow:hidden; }
+			#shadow_1, #shadow_3, #shadow_4{ width: 100%; }
+			div#info{ float: left; margin-right: 5px; width:702px; height:20px; position: relative; overflow:hidden; background-color:#000; color:#FFF; z-index:10; }
+			
+			/* MAPA DE IMAGENS */
+			#image    {position:relative; padding:0; margin:0; display:block; width:1000px; height:682px; background:url(img/upload/maps/map_exemplo.jpg); }
+			/*#image #item   { position:relative; left:36px; top:46px; z-index:20; }*/
+			#image #cursor { position:absolute; left:-30px; top:-30px; z-index:30; height:30px; width:30px;}
+
+			.extintor_gas {display:block; position:absolute; width:30px; height:30px; background:transparent url(img/extintor.gif) no-repeat; text-decoration:none;}
+			.extintor_gas:hover {background:transparent url(img/extintor2.gif) no-repeat;}			
+			
+			.extintor_po {display:block; position:absolute; width:30px; height:30px; background:transparent url(img/extintor.gif) no-repeat; text-decoration:none;}
+			.extintor_po:hover {background:transparent url(img/extintor2.gif) no-repeat;}
+			
+			.extintor_agua {display:block; position:absolute; width:30px; height:30px; background:transparent url(img/extintor.gif) no-repeat; text-decoration:none;}
+			.extintor_agua:hover {background:transparent url(img/extintor2.gif) no-repeat;}
+
+			
+		</style>
+	</head>
+  	<body>
+        
+        <div id="map_thumb">
+             <img src="img/upload/thumbs/map_exemplo.jpg" id="thumb"/>
+        </div>        
+        <div id="map">
+                
+            <dl id="image">
+                <!--<dd style="position:relative; left:36px; top:46px; z-index:20; "> <a class="extintor_gas" title="Extintor" href="#"></a></dd>-->
+                <dd id="cursor"><img src="img/ponteiro.gif"/></dd>                                
+            </dl>
+                    
+        </div>	
+        <div id="info"> </div>	       
+        
+	</body>
+</html>
